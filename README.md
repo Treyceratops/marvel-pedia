@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# `Project Description`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Marvel-pedia: A Marvel characters, comics, and stories encyclopedia
 
-## Available Scripts
+# `Screenshot`
 
-In the project directory, you can run:
+- 
 
-### `npm start`
+# `Getting Started/Installation Instructions`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- This would likely describe how to use the application and the steps to fork, clone and run the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## `API`
 
-### `npm test`
+- https://developer.marvel.com/docs#!/public/getStoryCollection_get_32
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Technologies Used`
 
-### `npm run build`
+- React
+- HTML
+- CSS
+- JavaScript
+- Animate.CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Wire Frames`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- https://www.figma.com/file/TULyzJR2wLjb3y96Lpqgwy/Marvel-Encyclopedia?node-id=0%3A1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `User Stories (AAU = As A User)`
 
-### `npm run eject`
+- AAU I want to see a welcome page with navigation bar
+- AAU I want to see a clickable list of comics that displays comic properties
+- AAU I want to see a clickable list of characters that displays character properties
+- AAU I want to see a clickable list of stories that displays story properties
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `MVP Goals`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- welcome/landing page with basic instructions
+- nav bar with links/routes in between components
+- component displaying character list from Marvel’s API w/clickable details
+- component displaying comic list from Marvel’s API w/clickable details
+- component displaying story list from Marvel’s API w/clickable details
+- clean/dry/organized code
+- responsive css design with grid and/or flexbox for mobile, tablet, and desktop
+- deployed to the Web
+- readMe documentation with link to app
+- add keys to lists
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Stretch Goals`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- add capabilities to search for desired results rather than just a displayed list
+- make app ultra user friendly with sleek features to catch user error (ie. .trim, .toLowerCase, autofocus & clear input box after searching etc.)
+- add more details/ properties perhaps by adding addition components
+further css design per component
+- set error state (.catch)
+- animation
+- correlating links to outside sources with further details
 
-## Learn More
+# `Contribution Guidelines`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements.
