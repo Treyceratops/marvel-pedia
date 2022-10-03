@@ -1,6 +1,6 @@
 # `Project Description`
 
-- Marvel-pedia: A Marvel characters, comics, and stories encyclopedia
+- Marvel-pedia: A Marvel characters encyclopedia
 
 # `Screenshot`
 
@@ -29,17 +29,16 @@
 ### `User Stories (AAU = As A User)`
 
 - AAU I want to see a welcome page with navigation bar
-- AAU I want to see a clickable list of comics that displays comic properties
-- AAU I want to see a clickable list of characters that displays character properties
-- AAU I want to see a clickable list of stories that displays story properties
+- - AAU I want to see be able to search for specific characters
+- AAU I want to then see character details(properties) per searched character
+- AAU I want to be able to add characters to a favorite list
 
 ### `MVP Goals`
 
 - welcome/landing page with basic instructions
 - nav bar with links/routes in between components
-- component displaying character list from Marvel’s API w/clickable details
-- component displaying comic list from Marvel’s API w/clickable details
-- component displaying story list from Marvel’s API w/clickable details
+- component displaying searchable character list from Marvel’s API w/character details
+- component for adding searched characters to a favorite list
 - clean/dry/organized code
 - responsive css design with grid and/or flexbox for mobile, tablet, and desktop
 - deployed to the Web
@@ -48,7 +47,6 @@
 
 ### `Stretch Goals`
 
-- add capabilities to search for desired results rather than just a displayed list
 - make app ultra user friendly with sleek features to catch user error (ie. .trim, .toLowerCase, autofocus & clear input box after searching etc.)
 - add more details/ properties perhaps by adding addition components
 further css design per component

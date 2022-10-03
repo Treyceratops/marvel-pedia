@@ -19,10 +19,10 @@ function Character(props) {
 			.then((res) => res.json())
 			.then((data) => {
 				setCharacters(data.data.results);
-                console.log('charactersssss', data.data.results);
+				console.log('charactersssss', data.data.results);
 			})
 			// set error state
-			.catch(() => console.log('error'));
+			.catch(console.error);
 	}, []);
 
 	return (
@@ -32,11 +32,14 @@ function Character(props) {
 					return (
 						<div>
 							<h1>{character.name}</h1>
-							<a
-								href={`${character.urls[0].url}`}
-								target='_blank'
-							>more info</a>
-							<img src={character.thumbnail.path + '.jpg'} alt='character-image' />
+							<img
+								src={character.thumbnail.path + '.jpg'}
+								alt='character-image'
+							/>
+                            <br/>
+							<a href={`${character.urls[0].url}`} target='_blank'>
+								more info
+							</a>
 						</div>
 					);
 				})}
