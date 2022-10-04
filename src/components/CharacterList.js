@@ -10,7 +10,6 @@ function Character(props) {
 		hash.update(
 			ts + process.env.REACT_APP_PRIVATE_KEY + process.env.REACT_APP_PUBLIC_KEY
 		);
-		console.log(ts, hash);
 		fetch(
 			`https://gateway.marvel.com/v1/public/characters?ts=${ts}&orderBy=name&limit=10&apikey=${
 				process.env.REACT_APP_PUBLIC_KEY
@@ -27,11 +26,11 @@ function Character(props) {
 
 	return (
 		<div>
-			<main>
+			<main className='char-container'>
 				{characters.map((character) => {
 					return (
-						<div key={character.id}>
-							<h1>{character.name}</h1>
+						<div className='individual-characters' key={character.id}>
+							<h1 className='character-text'>{character.name}</h1>
 							<img
 								src={character.thumbnail.path + '.jpg'}
 								alt='character-image'

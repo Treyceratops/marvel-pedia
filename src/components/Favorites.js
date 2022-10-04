@@ -5,10 +5,10 @@ function Favorites({ favorites }) {
     return (
 			<div>
 				<h1>Favorites</h1>
-				<div>
+				<div className='char-container'>
 					{favorites.map((favorite) => (
-						<div key={favorite.id}>
-							<h4>{favorite.name}</h4>
+						<div className='individual-characters' key={favorite.id}>
+							<h4 className='character-text'>{favorite.name}</h4>
 							<img
 								src={favorite.thumbnail.path + '.jpg'}
 								alt='favorite-image'

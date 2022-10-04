@@ -4,20 +4,20 @@ import { Routes, Route, Link } from 'react-router-dom';
 function Header(props) {
     return (
 			<div>
-				<nav>
+				<nav className='header'>
 					<Link to='/'>
-						<button>Home</button>
+						<button className='nav-buttons'>Home</button>
 					</Link>
 					<Link to='/characterlist'>
-						<button>Character List</button>
+						<button className='nav-buttons'>Character List</button>
 					</Link>
 					<Link to='/charactersearch'>
-						<button>Character Search</button>
+						<button className='nav-buttons'>Character Search</button>
 					</Link>
 					{/* <Link to='/comics'>Comics</Link>
 					<Link to='/stories'>Stories</Link> */}
 					<Link to='/favorites'>
-						<button>Favorites</button>
+						<button className='nav-buttons'>Favorites</button>
 					</Link>
 				</nav>
 			</div>

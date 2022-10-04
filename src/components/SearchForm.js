@@ -20,11 +20,11 @@ function SearchForm({ getCharacters, setSearchString, searchString }) {
 					type='text'
 					name='searchString'
 					required
-                    autoFocus
+					autoFocus
 					onChange={handleChange}
 					value={searchString}
 				/>
-				<button type='submit'>
+				<button className='submit-button' type='submit'>
 					<SearchIcon height='1rem' width='1rem' />
 				</button>
 			</form>
