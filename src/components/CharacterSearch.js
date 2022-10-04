@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import SearchForm from './SearchForm';
 import SearchResults from './SearchResults';
 
-function CharacterSearch(props) {
+function CharacterSearch({ setFavorites, favorites }) {
 	const [characters, setCharacters] = useState([]);
-	const [searchString, setSearchString] = useState('1011334');
+	const [searchString, setSearchString] = useState('Hulk');
 	const [lastSearch, setLastSearch] = useState('');
 
 	const searchOptions = {
@@ -19,25 +19,6 @@ function CharacterSearch(props) {
 
 	useEffect(() => {
 		getCharacters(searchString);
-
-		// const ts = Number(new Date());
-		// const hash = md5.create();
-		// hash.update(
-		// 	ts + process.env.REACT_APP_PRIVATE_KEY + process.env.REACT_APP_PUBLIC_KEY
-		// );
-		// console.log(ts, hash);
-		// fetch(
-		// 	`https://gateway.marvel.com/v1/public/characters?ts=${ts}&orderBy=name&limit=10&apikey=${
-		// 		process.env.REACT_APP_PUBLIC_KEY
-		// 	}&hash=${hash.hex()}`
-		// )
-		// 	.then((res) => res.json())
-		// 	.then((data) => {
-		// 		setCharacters(data.data.results);
-		// 		console.log('charactersssss', data.data.results);
-		// 	})
-		// 	// set error state
-		// 	.catch(console.error);
 	}, []);
 
 	function getCharacters(searchString) {
@@ -47,28 +28,20 @@ function CharacterSearch(props) {
 			ts + process.env.REACT_APP_PRIVATE_KEY + process.env.REACT_APP_PUBLIC_KEY
 		);
 
-		const url = `${searchOptions.api}${searchOptions.endpoint}/${searchString}?ts=${ts}&orderBy=name&limit=${searchOptions.limit}&apikey=${searchOptions.publicKey}&hash=${hash.hex()}`;
+		const url = `${searchOptions.api}${searchOptions.endpoint}?name=${searchString}&ts=${ts}&orderBy=name&limit=${searchOptions.limit}&apikey=${searchOptions.publicKey}&hash=${hash.hex()}`;
 
 
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
+                console.log('responseeeee', res.data.results)
 				setCharacters(res.data.results);
-				setLastSearch(searchString);
-				setSearchString('');
-				console.log('character searchhhhhhhhh', res.data.results[0].name);
+                console.log('characterssssssssss', characters);
+				// setLastSearch(searchString);
+				// setSearchString('');
 			})
 			// set error state
 			.catch(console.error);
-	}
-
-	function handleChange(event) {
-		setSearchString(event.target.value);
-	}
-
-	function handleSubmit(event) {
-		event.preventDefault();
-		getCharacters(searchString);
 	}
 
 	return (
@@ -76,11 +49,11 @@ function CharacterSearch(props) {
 			<h1>Character Search</h1>
 			<nav>
 				<SearchForm
-				handleChange={handleChange}
-				handleSubmit={handleSubmit}
-				searchString={searchString}
+				setSearchString={setSearchString}
+                getCharacters={getCharacters}
+                searchString={searchString}
 				/>
-                <SearchResults characters={characters} />
+                <SearchResults characters={characters} setFavorites={setFavorites} favorites={favorites} />
 			</nav>
 		</div>
 	);

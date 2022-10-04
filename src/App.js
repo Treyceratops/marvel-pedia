@@ -1,5 +1,6 @@
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import CharacterList from './components/CharacterList';
@@ -10,6 +11,7 @@ import SearchForm from './components/SearchForm';
 // import Story from './components/Story';
 
 function App() {
+	const [favorites, setFavorites] = useState([]);
 
   return (
 		<div className='App'>
@@ -20,8 +22,8 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/characterlist' element={<CharacterList />} />
-					<Route path='/charactersearch' element={<CharacterSearch />} />
-					<Route path='/favorites' element={<Favorites />} />
+					<Route path='/charactersearch' element={<CharacterSearch setFavorites={setFavorites} favorites={favorites} />} />
+					<Route path='/favorites' element={<Favorites favorites={favorites} />} />
 					{/* <Route path='/comics' element={<Comic />} />
 					<Route path='/stories' element={<Story />} /> */}
 				</Routes>

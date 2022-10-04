@@ -30,13 +30,13 @@ function Character(props) {
 			<main>
 				{characters.map((character) => {
 					return (
-						<div>
+						<div key={character.id}>
 							<h1>{character.name}</h1>
 							<img
 								src={character.thumbnail.path + '.jpg'}
 								alt='character-image'
 							/>
-                            <br/>
+							<br />
 							<a href={`${character.urls[0].url}`} target='_blank'>
 								more info
 							</a>

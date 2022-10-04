@@ -1,7 +1,17 @@
 import React from 'react';
 import { SearchIcon } from './SearchIcon';
 
-function SearchForm( handleSubmit, handleChange, searchString ) {
+function SearchForm({ getCharacters, setSearchString, searchString }) {
+    
+	function handleChange(event) {
+		setSearchString(event.target.value);
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		getCharacters(searchString);
+	}
+
 	return (
 		<div>
 			<form onSubmit={handleSubmit} className='form-horizontal'>
