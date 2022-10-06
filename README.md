@@ -9,7 +9,7 @@
 
 # `Getting Started/Installation Instructions`
 
-- Link to deployed website included below. Can be forked/cloned from the github repository.
+- https://marvel-pedia.netlify.app/
 
 # `API`
 
