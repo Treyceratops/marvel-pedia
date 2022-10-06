@@ -1,6 +1,6 @@
 # `Project Description`
 
-- Marvel-pedia: A Marvel characters encyclopedia
+- Marvel-pedia: a marvel character & comic encyclopedia
 
 # `Screenshot`
 
@@ -8,7 +8,8 @@
 
 # `Getting Started/Installation Instructions`
 
-- This would likely describe how to use the application and the steps to fork, clone and run the application.
+- Link to deployed website included below. Can be forked/cloned from the github repository.
+
 
 # `API`
 
@@ -20,40 +21,15 @@
 - HTML
 - CSS
 - JavaScript
-- Animate.CSS
 
 # `Wire Frames`
 
 - https://www.figma.com/file/TULyzJR2wLjb3y96Lpqgwy/Marvel-Encyclopedia?node-id=0%3A1
 
-# `User Stories (AAU = As A User)`
-
-- AAU I want to see a welcome page with navigation bar
-- AAU I want to see random characters from a list
-- AAU I want to see be able to search for specific characters
-- AAU I want to then see character details(properties) per searched character
-- AAU I want to be able to add characters to a favorite list
-
-# `MVP Goals`
-
-- welcome/landing page with basic instructions
-- nav bar with links/routes in between components
-- component displaying searchable character list from Marvel’s API w/character details
-- component for adding searched characters to a favorite list
-- clean/dry/organized code
-- responsive css design with grid and/or flexbox for mobile, tablet, and desktop
-- deployed to the Web
-- readMe documentation with link to app
-
-# `Stretch Goals`
-
-- make app ultra user friendly with sleek features to catch user error (ie. .trim, autofocus & clear input box after searching etc.)
-- add more details/ properties perhaps by adding addition components
-further css design per component
-- set error state (.catch)
-- animation
-- correlating links to outside sources with further details
-
 # `Contribution Guidelines`
 
-- This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements.
+- Possible additions: 
+    - delete button if using a database
+    - mild animation
+    - add more details/ properties perhaps by adding addition components
+    further css design per component
