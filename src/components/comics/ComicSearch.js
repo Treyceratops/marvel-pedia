@@ -10,7 +10,7 @@ function ComicSearch({ setFavorites, favorites }) {
 	const searchOptions = {
 		publicKey: process.env.REACT_APP_PUBLIC_KEY,
 		privateKey: process.env.REACT_APP_PRIVATE_KEY,
-		limit: 10,
+		limit: 20,
 		api: 'https://gateway.marvel.com:443/v1/public',
 		endpoint: '/comics',
 	};

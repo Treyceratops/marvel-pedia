@@ -1,6 +1,11 @@
 import React from 'react';
 
 function Favorites({ favorites, setFavorites }) {
+	function handleDelete(id) {
+		const updatedFavorites = favorites.filter((favorite) => favorite.id !== id);
+		setFavorites(updatedFavorites);
+	}
+
 	if (!favorites.length) {
 		return (
 			<div>
@@ -22,10 +27,15 @@ function Favorites({ favorites, setFavorites }) {
 						<a href={`${favorite.urls[0].url}`} target='_blank'>
 							more info
 						</a>
+						<br />
+						<button
+							className='favorite-button'
+							onClick={() => handleDelete(favorite.id)}>
+							❌
+						</button>
 					</div>
 				))}
 			</div>
-			{/* <button onClick={() => setFavorites([])}>x</button> */}
 		</div>
 	);
 }

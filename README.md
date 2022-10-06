@@ -25,7 +25,6 @@
 # `Contribution Guidelines`
 
 - Possible additions:
-  - delete button or toggle favorites
   - mild animation
   - add more details/ properties or perhaps by adding addition clickable components
   - further css design per component
