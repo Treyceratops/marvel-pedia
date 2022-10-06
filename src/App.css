@@ -79,8 +79,6 @@ input:focus {
   padding-bottom: 4rem;
   background: url('./images/marvel-comic.jpg');
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
 }
 
 .individual-characters {
@@ -99,6 +97,10 @@ input:focus {
   width: 9rem;
   height: 6rem;
   margin: .8rem;
+}
+
+.page-title {
+  color: red;
 }
 
 .submit-button {

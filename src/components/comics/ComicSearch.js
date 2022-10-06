@@ -43,7 +43,7 @@ function ComicSearch({ setFavorites, favorites }) {
 
 	return (
 		<div>
-			<h1>Comic Search</h1>
+			<h1 className='page-title'>Comic Search</h1>
 			<main>
 				<ComicSearchForm
 					setSearchString={setSearchString}

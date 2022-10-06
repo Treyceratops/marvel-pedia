@@ -2,7 +2,12 @@ import React from 'react';
 
 function CharacterSearchResults({ characters, setFavorites, favorites }) {
 	if (!characters.length) {
-		return <h2>No Characters Found! <br /> Try typing just the first few letters of their name.</h2>;
+		return (
+			<h2>
+				No Characters Found! <br /> Try typing just the first few letters of
+				their name.
+			</h2>
+		);
 	}
 
 	return (

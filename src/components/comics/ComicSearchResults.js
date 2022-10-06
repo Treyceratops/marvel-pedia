@@ -20,7 +20,7 @@ function ComicSearchResults({ comics, setFavorites, favorites }) {
 					<a href={`${comic.urls[0].url}`} target='_blank'>
 						more info
 					</a>
-                    <br />
+					<br />
 					<button
 						className='favorite-button'
 						onClick={() => setFavorites([...favorites, comic])}>

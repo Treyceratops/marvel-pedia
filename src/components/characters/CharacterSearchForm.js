@@ -2,7 +2,6 @@ import React from 'react';
 import { SearchIcon } from '../SearchIcon';
 
 function CharacterSearchForm({ getCharacters, setSearchString, searchString }) {
-    
 	function handleChange(event) {
 		setSearchString(event.target.value);
 	}

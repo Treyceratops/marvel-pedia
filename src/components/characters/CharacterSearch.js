@@ -29,8 +29,11 @@ function CharacterSearch({ setFavorites, favorites }) {
 			ts + process.env.REACT_APP_PRIVATE_KEY + process.env.REACT_APP_PUBLIC_KEY
 		);
 
-		const url = `${searchOptions.api}${searchOptions.endpoint}?nameStartsWith=${searchString}&ts=${ts}&orderBy=name&limit=${searchOptions.limit}&apikey=${searchOptions.publicKey}&hash=${hash.hex()}`;
-
+		const url = `${searchOptions.api}${
+			searchOptions.endpoint
+		}?nameStartsWith=${searchString}&ts=${ts}&orderBy=name&limit=${
+			searchOptions.limit
+		}&apikey=${searchOptions.publicKey}&hash=${hash.hex()}`;
 
 		fetch(url)
 			.then((res) => res.json())
@@ -43,14 +46,18 @@ function CharacterSearch({ setFavorites, favorites }) {
 
 	return (
 		<div>
-			<h1>Character Search</h1>
+			<h1 className='page-title'>Character Search</h1>
 			<main>
 				<CharacterSearchForm
-				setSearchString={setSearchString}
-                getCharacters={getCharacters}
-                searchString={searchString}
+					setSearchString={setSearchString}
+					getCharacters={getCharacters}
+					searchString={searchString}
 				/>
-                <CharacterSearchResults characters={characters} setFavorites={setFavorites} favorites={favorites} />
+				<CharacterSearchResults
+					characters={characters}
+					setFavorites={setFavorites}
+					favorites={favorites}
+				/>
 			</main>
 		</div>
 	);
