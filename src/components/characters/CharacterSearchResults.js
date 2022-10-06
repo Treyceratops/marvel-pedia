@@ -1,7 +1,6 @@
 import React from 'react';
-import Favorites from './Favorites';
 
-function SearchResults({ characters, setFavorites, favorites }) {
+function CharacterSearchResults({ characters, setFavorites, favorites }) {
 	if (!characters.length) {
 		return <h2>No Characters Found! <br /> Try typing just the first few letters of their name.</h2>;
 	}
@@ -28,4 +27,4 @@ function SearchResults({ characters, setFavorites, favorites }) {
 	);
 }
 
-export default SearchResults;
+export default CharacterSearchResults;

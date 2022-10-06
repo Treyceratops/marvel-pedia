@@ -2,10 +2,14 @@
   text-align: center;
 }
 
+a {
+  color: yellow;
+}
+
 body {
   font-family: 'Bangers', cursive;
   font-size: 2rem;
-  /* background: url('./images/marvel-moon.jpeg'); */
+  letter-spacing: .2rem;
   background-color:rgba(0, 0, 0, 0.9);
   background-repeat: no-repeat;
   color: white;
@@ -50,6 +54,21 @@ input:focus {
 
 .character-text{
   margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.favorite-button {
+  background-color: black;
+  border: white solid;
+  border-radius: .5rem;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.favorite-button:hover {
+  color: black;
+  border-color: yellow;
+  transition-duration: 1s;
 }
 
 .header {
@@ -66,23 +85,23 @@ input:focus {
 
 .individual-characters {
   border: 2px solid white;
-  border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.9);
   margin: 1rem;
 }
 
 .nav-buttons {
   font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
   background: black;
   color: white;
   border: black 8px solid;
   box-shadow: 8px 10px;
-  width: 6rem;
-  height: 3rem;
+  width: 9rem;
+  height: 6rem;
   margin: .8rem;
 }
 
-.submit-button, .favorite-button {
+.submit-button {
   height: 3rem;
   width: 3rem;
   background: black;
@@ -96,11 +115,4 @@ input:focus {
   color: yellow;
   box-shadow: 2px 3px;
   transition-duration: 1s;
-}
-
-.favorite-button {
-  background-color: white;
-  border: white 8px solid;
-  box-shadow: 4px 6px red;
-  border-radius: 1rem;
 }

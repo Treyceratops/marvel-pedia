@@ -1,7 +1,7 @@
 import React from 'react';
-import { SearchIcon } from './SearchIcon';
+import { SearchIcon } from '../SearchIcon';
 
-function SearchForm({ getCharacters, setSearchString, searchString }) {
+function CharacterSearchForm({ getCharacters, setSearchString, searchString }) {
     
 	function handleChange(event) {
 		setSearchString(event.target.value);
@@ -14,13 +14,14 @@ function SearchForm({ getCharacters, setSearchString, searchString }) {
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit} className='form-horizontal'>
+			<form onSubmit={handleSubmit}>
 				<input
 					placeholder='hero/villain name...'
 					type='text'
 					name='searchString'
 					required
 					autoFocus
+					autoComplete='off'
 					onChange={handleChange}
 					value={searchString}
 				/>
@@ -32,4 +33,4 @@ function SearchForm({ getCharacters, setSearchString, searchString }) {
 	);
 }
 
-export default SearchForm;
+export default CharacterSearchForm;

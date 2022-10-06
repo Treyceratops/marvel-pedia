@@ -3,12 +3,9 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
-import CharacterList from './components/CharacterList';
-import CharacterSearch from './components/CharacterSearch';
-// import Comic from './components/Comic';
+import CharacterSearch from './components/characters/CharacterSearch';
+import ComicSearch from './components/comics/ComicSearch';
 import Favorites from './components/Favorites';
-import SearchForm from './components/SearchForm';
-// import Story from './components/Story';
 
 function App() {
 	const [favorites, setFavorites] = useState([]);
@@ -21,11 +18,27 @@ function App() {
 			<main>
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/characterlist' element={<CharacterList />} />
-					<Route path='/charactersearch' element={<CharacterSearch setFavorites={setFavorites} favorites={favorites} />} />
-					<Route path='/favorites' element={<Favorites favorites={favorites} />} />
-					{/* <Route path='/comics' element={<Comic />} />
-					<Route path='/stories' element={<Story />} /> */}
+					<Route
+						path='/characters'
+						element={
+							<CharacterSearch
+								setFavorites={setFavorites}
+								favorites={favorites}
+							/>
+						}
+					/>
+					<Route
+						path='/comics'
+						element={
+							<ComicSearch setFavorites={setFavorites} favorites={favorites} />
+						}
+					/>
+					<Route
+						path='/favorites'
+						element={
+							<Favorites favorites={favorites} setFavorites={setFavorites} />
+						}
+					/>
 				</Routes>
 			</main>
 		</div>

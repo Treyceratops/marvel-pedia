@@ -4,9 +4,17 @@ function Home(props) {
     return (
 			<div>
 				<h1>Welcome to Marvel-pedia!</h1>
-                <h2>a marvel character encyclopedia</h2>
-                <br/>
-                <h3>Search for super heroes/villains, learn more about them and pick your favorites! </h3>
+				<h4>a marvel character & comic encyclopedia</h4>
+                <br />
+				<h6>
+					-search for super heroes/villains or comics
+				</h6>
+				<h6>
+					-learn more about them
+				</h6>
+				<h6>
+					-pick your favorites
+				</h6>
 			</div>
 		);
 }
